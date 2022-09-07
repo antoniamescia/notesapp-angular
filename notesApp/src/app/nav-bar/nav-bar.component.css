@@ -1,0 +1,13 @@
+/* NAVBAR STYLES */
+#ucuIcon {
+    /*border-radius: 2px;
+    padding: 1px;
+    margin-bottom: 1px;*/
+    width: 40%;
+    height: auto;
+}
+
+.navbarDiv {
+    display: table;
+    margin: 0 auto;
+}
