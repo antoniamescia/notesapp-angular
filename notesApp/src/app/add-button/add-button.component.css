@@ -1,6 +1,5 @@
-.delete-button {
-    padding-left: 150pt;
-    padding-right: 10pt;
-    padding-bottom: 10pt;
-    border-radius: 50pt;
-}
+.btnB {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
