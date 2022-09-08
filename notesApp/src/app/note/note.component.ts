@@ -3,6 +3,7 @@ import { AddNoteService } from '../add-note.service';
 import { EditNoteService } from '../edit-note.service';
 import { WeatherService } from '../weather.service';
 import { Note } from '../note';
+import { WeatherType } from '../weather';
 
 @Component({
   selector: 'app-note',
@@ -11,11 +12,21 @@ import { Note } from '../note';
 })
 export class NoteComponent implements OnInit {
 
-  selectedNote?: Note;
+  //selectedNote?: Note;
 
-  notes: Note[] = [];
+  note: Note = {
+    id: 1,
+    title: 'Note 1',
+    description: 'This is the first note',
+    city: 'London',
+    date: new Date(),
+    weather: { 
+      temperture: 20,
+      type: WeatherType.Cloudy
+    }
+  }
 
-  constructor(private addNoteService : AddNoteService, private editNoteService: EditNoteService, public weatherService : WeatherService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
