@@ -10,6 +10,7 @@ import { Utils } from '../utils';
 })
 export class WeatherComponent implements OnInit {
 
+  weathers: Weather[] = [];
   
   weather: Weather = {
     id: 1,
@@ -24,6 +25,15 @@ export class WeatherComponent implements OnInit {
   constructor(private weatherService: WeatherService) { }
 
   ngOnInit(): void {
+    this.getWeathers();
+  }
+
+  getWeathers(): void {
+    this.weatherService.getWeathers().subscribe(weathers => {
+      this.weathers = weathers;
+      console.log(this.weathers);  
+    });
+      
   }
 
 }

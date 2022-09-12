@@ -1,22 +1,35 @@
-<div class="card" style="width: 18rem">
-  <div>    
-    <img
-      src="./assets/img/guilherme-hellwinkel-B9YoUi7RYiE-unsplash.jpg"
-      class="card-img-top"
-      alt="{{ note.city }}"
-    />
-  </div>
-  <app-weather></app-weather>
-  <div class="card-body">
-    <h5 class="card-title title">{{ note.title }}</h5>
-    <p class="card-text description text-truncate">{{ note.description }}</p>
-    <p class="card-text text-left note-date">{{ note.date | date }}</p>
-    <div class="delete-button">
-      <span>
-        <button href="#" class="btn btn-danger" id="cardDelete">
+<div
+  class="cardsBody container d-flex flex-wrap align-content-start justify-content-center"
+>
+  <div class="card text-right" style="width: 18rem">
+    <h5 class="card-header text-center note-title">{{ note.title }}</h5>
+    <div class="card-body">
+      <p class="card-body card-text text-left note-description">
+        {{ note.description }}
+      </p>
+    </div>
+    <div class="card-body">
+      <p class="card-body card-text text-left note-city">{{ note.city }}</p>
+    </div>
+    <div class="card-body">
+      <p class="card-body card-text text-left note-date">
+        {{ note.date | date }}
+      </p>
+    </div>
+    <div>
+      <div>
+        <!-- acá va el componente magico de weather -->
+      </div>
+      <div class="delete-button">
+        <button
+          type="button"
+          id="cardDelete"
+          class="btn btn-danger"
+          id="deleteCardButton"
+        >
           <img src="./assets/img/delete.png" id="cardDeleteIcon" alt="Delete" />
         </button>
-      </span>
+      </div>
     </div>
   </div>
 </div>

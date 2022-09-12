@@ -53,7 +53,7 @@ export class InMemoryDataService implements InMemoryDbService {
       },
     ];
     
-    let weathers: Weather[] = [
+    let weather: Weather[] = [
       { id: 1, temperture: 20, type: WeatherType.Sunny },
       { id: 2, temperture: 30, type: WeatherType.Cloudy },
       { id: 3, temperture: 10, type: WeatherType.Rainy },
@@ -63,7 +63,7 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 7, temperture: 33, type: WeatherType.Foggy },
       { id: 8, temperture: 24, type: WeatherType.Hazy },
     ];
-    return { notes, weathers };
+    return { notes, weather };
   }
 
   genNoteId(notes: Note[]): number {

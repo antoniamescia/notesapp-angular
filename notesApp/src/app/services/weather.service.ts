@@ -11,7 +11,7 @@ export class WeatherService {
 
   constructor(private http: HttpClient) {}
 
-  getWeather(): Observable<Weather[]> {
+  getWeathers(): Observable<Weather[]> {
     return this.http.get<Weather[]>(this.weatherUrl).pipe(
       retry(3),
       catchError(this.handleError<Weather[]>('getWeather', []))
