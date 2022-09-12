@@ -1,0 +1,33 @@
+
+
+/* CARDS (Notas) */
+.cards {
+  padding: 3pt;
+  margin: 3pt;
+  border-radius: 5pt;
+}
+
+#cardDeleteIcon {
+  width: 80%;
+  height: auto;
+}
+
+.cardsBody {
+  display: flex;
+  margin-right: auto;
+
+}
+
+.delete-button {
+  padding-left: 150pt;
+  padding-right: 10pt;
+  padding-bottom: 10pt;
+  border-radius: 50pt;
+}
+
+.note-description{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 400px;
+}
