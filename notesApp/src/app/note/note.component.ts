@@ -1,9 +1,8 @@
+import { WeatherService } from './../services/weather.service';
 import { Component, OnInit } from '@angular/core';
-import { AddNoteService } from '../add-note.service';
-import { EditNoteService } from '../edit-note.service';
-import { WeatherService } from '../weather.service';
+import { NoteService } from '../services/note.service';
 import { Note } from '../note';
-import { WeatherType } from '../weather';
+import { Weather, WeatherType } from '../weather';
 
 @Component({
   selector: 'app-note',
@@ -12,26 +11,35 @@ import { WeatherType } from '../weather';
 })
 export class NoteComponent implements OnInit {
 
-  //selectedNote?: Note;
+  weathers: Weather[] = [];
+  notes: Note[] = [];
 
   note: Note = {
     id: 1,
     title: 'Note 1',
-    description: 'This is the first note',
-    city: 'London',
+    description: 'This is the first note cnsdjncsdjcnbdsjcnvjskdnjkvsnkjscnkjscnjdskcndsjkcndsk',
+    city: 'Montevideo',
     date: new Date(),
     weather: { 
+      id: 1,
       temperture: 20,
       type: WeatherType.Cloudy
     }
   }
 
-  constructor() { }
+  constructor(private noteService: NoteService) { }
 
   ngOnInit(): void {
+    this.getNotes();
   }
 
-  // getNotes(): void {
-  //   this.addNoteService.getNotes().subscribe(notes => this.notes = notes);
-  // }
+  // Esto no va acá! Estoy probando nomás.
+  private getNotes(): void {
+    this.noteService.getNotes().subscribe(notes => {
+      this.notes = notes;
+      console.log(this.notes);
+      
+    });
+  }
+
 }

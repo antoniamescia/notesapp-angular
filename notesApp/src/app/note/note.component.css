@@ -6,8 +6,9 @@
 }
 
 #cardDeleteIcon {
-    width: 80%;
+    width: 120%;
     height: auto;
+    display: block;
 }
 
 .cardsBody {
@@ -22,3 +23,48 @@
     padding-bottom: 10pt;
     border-radius: 50pt;
 }
+
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.box{
+    width: 100pt;
+    height:50pt;            
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.8;  /* for demo purpose  */
+}
+.stack-top{
+    z-index: 2;
+    /* position: static; */
+    margin-top: 75pt;
+    margin-left: 5pt;
+    border-radius: 10pt;
+    background-color: #FAF9F6;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+  
+  /* Bottom left text */
+  .bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+  }
+
+  .temp{
+    margin-bottom: 0pt;
+    margin-top: 4pt;
+    margin-left: 8pt;
+    font-size: 17pt;
+  }
+
+  .city{
+    margin-left: 8pt;
+    font-size: 9pt;
+  }
+

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { WeatherService } from '../weather.service';
+import { WeatherService } from '../services/weather.service';
 import { Weather, WeatherType } from '../weather';
 import { Utils } from '../utils';
 
@@ -12,6 +12,7 @@ export class WeatherComponent implements OnInit {
 
   
   weather: Weather = {
+    id: 1,
     temperture: 20,
     type: WeatherType.Cloudy
   }
